@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2046FAEF296C2A8A00AFD0A8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2046FAEE296C2A8A00AFD0A8 /* main.cpp */; };
 		2046FB09296C2AAA00AFD0A8 /* thulac_lib.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2046FAFF296C2AAA00AFD0A8 /* thulac_lib.cc */; };
+		2046FB17296C3E1400AFD0A8 /* libthulac.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2046FB16296C3E1400AFD0A8 /* libthulac.hpp */; };
+		2046FB19296C3E1400AFD0A8 /* libthulacPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2046FB18296C3E1400AFD0A8 /* libthulacPriv.hpp */; };
+		2046FB1B296C3E1400AFD0A8 /* libthulac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2046FB1A296C3E1400AFD0A8 /* libthulac.cpp */; };
+		2046FB26296C435600AFD0A8 /* ThulacHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2046FB24296C435600AFD0A8 /* ThulacHelper.cpp */; };
+		2046FB27296C435600AFD0A8 /* ThulacHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2046FB24296C435600AFD0A8 /* ThulacHelper.cpp */; };
+		2046FB29296C448400AFD0A8 /* ThulacHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2046FB25296C435600AFD0A8 /* ThulacHelper.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		2046FAEB296C2A8A00AFD0A8 /* thulac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = thulac; sourceTree = BUILT_PRODUCTS_DIR; };
-		2046FAEE296C2A8A00AFD0A8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2046FAF6296C2AAA00AFD0A8 /* preprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preprocess.h; sourceTree = "<group>"; };
 		2046FAF7296C2AAA00AFD0A8 /* cb_ngram_feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cb_ngram_feature.h; sourceTree = "<group>"; };
 		2046FAF8296C2AAA00AFD0A8 /* verbword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = verbword.h; sourceTree = "<group>"; };
@@ -45,10 +49,23 @@
 		2046FB06296C2AAA00AFD0A8 /* filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filter.h; sourceTree = "<group>"; };
 		2046FB07296C2AAA00AFD0A8 /* dat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dat.h; sourceTree = "<group>"; };
 		2046FB08296C2AAA00AFD0A8 /* thulac_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thulac_lib.h; sourceTree = "<group>"; };
+		2046FB14296C3E1400AFD0A8 /* liblibthulac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibthulac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2046FB16296C3E1400AFD0A8 /* libthulac.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libthulac.hpp; sourceTree = "<group>"; };
+		2046FB18296C3E1400AFD0A8 /* libthulacPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libthulacPriv.hpp; sourceTree = "<group>"; };
+		2046FB1A296C3E1400AFD0A8 /* libthulac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libthulac.cpp; sourceTree = "<group>"; };
+		2046FB24296C435600AFD0A8 /* ThulacHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThulacHelper.cpp; sourceTree = "<group>"; };
+		2046FB25296C435600AFD0A8 /* ThulacHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ThulacHelper.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2046FAE8296C2A8A00AFD0A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2046FB12296C3E1400AFD0A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +80,7 @@
 			children = (
 				2046FAF5296C2AAA00AFD0A8 /* include */,
 				2046FAED296C2A8A00AFD0A8 /* thulac */,
+				2046FB15296C3E1400AFD0A8 /* libthulac */,
 				2046FAEC296C2A8A00AFD0A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2046FAEB296C2A8A00AFD0A8 /* thulac */,
+				2046FB14296C3E1400AFD0A8 /* liblibthulac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +97,8 @@
 		2046FAED296C2A8A00AFD0A8 /* thulac */ = {
 			isa = PBXGroup;
 			children = (
-				2046FAEE296C2A8A00AFD0A8 /* main.cpp */,
+				2046FB24296C435600AFD0A8 /* ThulacHelper.cpp */,
+				2046FB25296C435600AFD0A8 /* ThulacHelper.hpp */,
 			);
 			path = thulac;
 			sourceTree = "<group>";
@@ -110,7 +130,30 @@
 			path = ../include;
 			sourceTree = "<group>";
 		};
+		2046FB15296C3E1400AFD0A8 /* libthulac */ = {
+			isa = PBXGroup;
+			children = (
+				2046FB16296C3E1400AFD0A8 /* libthulac.hpp */,
+				2046FB18296C3E1400AFD0A8 /* libthulacPriv.hpp */,
+				2046FB1A296C3E1400AFD0A8 /* libthulac.cpp */,
+			);
+			path = libthulac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2046FB10296C3E1400AFD0A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2046FB29296C448400AFD0A8 /* ThulacHelper.hpp in Headers */,
+				2046FB19296C3E1400AFD0A8 /* libthulacPriv.hpp in Headers */,
+				2046FB17296C3E1400AFD0A8 /* libthulac.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2046FAEA296C2A8A00AFD0A8 /* thulac */ = {
@@ -130,6 +173,23 @@
 			productReference = 2046FAEB296C2A8A00AFD0A8 /* thulac */;
 			productType = "com.apple.product-type.tool";
 		};
+		2046FB13296C3E1400AFD0A8 /* libthulac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2046FB1E296C3E1400AFD0A8 /* Build configuration list for PBXNativeTarget "libthulac" */;
+			buildPhases = (
+				2046FB10296C3E1400AFD0A8 /* Headers */,
+				2046FB11296C3E1400AFD0A8 /* Sources */,
+				2046FB12296C3E1400AFD0A8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libthulac;
+			productName = libthulac;
+			productReference = 2046FB14296C3E1400AFD0A8 /* liblibthulac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +200,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					2046FAEA296C2A8A00AFD0A8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2046FB13296C3E1400AFD0A8 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -158,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				2046FAEA296C2A8A00AFD0A8 /* thulac */,
+				2046FB13296C3E1400AFD0A8 /* libthulac */,
 			);
 		};
 /* End PBXProject section */
@@ -168,7 +232,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2046FB09296C2AAA00AFD0A8 /* thulac_lib.cc in Sources */,
-				2046FAEF296C2A8A00AFD0A8 /* main.cpp in Sources */,
+				2046FB26296C435600AFD0A8 /* ThulacHelper.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2046FB11296C3E1400AFD0A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2046FB27296C435600AFD0A8 /* ThulacHelper.cpp in Sources */,
+				2046FB1B296C3E1400AFD0A8 /* libthulac.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +377,34 @@
 			};
 			name = Release;
 		};
+		2046FB1C296C3E1400AFD0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D32H89TCLS;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2046FB1D296C3E1400AFD0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D32H89TCLS;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +422,15 @@
 			buildConfigurations = (
 				2046FAF3296C2A8A00AFD0A8 /* Debug */,
 				2046FAF4296C2A8A00AFD0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2046FB1E296C3E1400AFD0A8 /* Build configuration list for PBXNativeTarget "libthulac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2046FB1C296C3E1400AFD0A8 /* Debug */,
+				2046FB1D296C3E1400AFD0A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
