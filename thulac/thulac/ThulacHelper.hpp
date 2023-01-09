@@ -16,19 +16,20 @@ using namespace std;
 class ThulacHelper
 {
 public:
-    ThulacHelper()
+    static string deal(string sentence)
     {
-        lac.init(model_path.c_str(),NULL,0,0,0,' ');
+        static string model_path = "/Users/yujizhu/Documents/Git/GithubCpp/AIHelper/THULAC/models";
+        static THULAC* Lac = NULL;
+        static THULAC_result* Result = NULL;
+        if(!Lac)
+        {
+            Lac = new THULAC();
+            Lac->init(model_path.c_str(),NULL,0,0,0,' ');
+            Result = new THULAC_result();
+        }
+        Lac->cut(sentence, *Result);
+        return Lac->toString(*Result);
     }
-    string deal(string sentence)
-    {
-        lac.cut(sentence, result);
-        return lac.toString(result);
-    }
-protected:
-    THULAC lac;
-    string model_path = "/Users/yujizhu/Documents/Git/GithubCpp/AIHelper/THULAC/models";
-    THULAC_result result;
 };
 
 #endif /* ThulacHelper_hpp */
