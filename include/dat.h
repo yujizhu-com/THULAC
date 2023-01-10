@@ -115,8 +115,8 @@ public:
      * 如果匹配成果，返回下标（base[下标]为value）
      * */
     int match(const Word& word,int post=0){
-        register int ind=0;
-        register int base=0;
+        int ind=0;
+        int base=0;
         for(int i=0;i<(int)word.size();i++){
             ind=dat[ind].base+word[i];
             if((ind>=dat_size)||dat[ind].check!=base)return -1;
@@ -137,8 +137,8 @@ public:
 
     /*return -base or number of matched characters*/
     int get_info(std::vector<int> prefix){
-        register int ind=0;
-        register int base=0;
+        int ind=0;
+        int base=0;
         for(size_t i=0;i<prefix.size();i++){
             ind=dat[ind].base+prefix[i];
             if((ind>=dat_size)||dat[ind].check!=base)return i;
@@ -227,17 +227,17 @@ public:
         size_t size=offsets.size();
         
         
-        register size_t base=-head;
+        size_t base=-head;
         while(1){
             if(base==dat_size)extends();
             if(size)
                 while(base+offsets[size-1]>=dat_size)
                     extends();
-            register int flag=true;
+            int flag=true;
             if(dat[base].check>=0){
                 flag=false;
             }else{
-                for(register int i=0;i<size;i++){
+                for(int i=0;i<size;i++){
                     if(dat[base+offsets[i]].check>=0){//used
                         flag=false;
                         break;
