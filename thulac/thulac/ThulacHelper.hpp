@@ -24,7 +24,7 @@ public:
         if(!Lac)
         {
             Lac = new THULAC();
-            Lac->init(model_path.c_str(),NULL,0,0,0,' ');
+            Lac->init(model_path.c_str(),NULL,0,0,0,'|');
             Result = new THULAC_result();
         }
         Lac->cut(sentence, *Result);
